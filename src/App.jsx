@@ -5,7 +5,7 @@ import {
   Route,
   Navigate,
 } from "react-router-dom";
-import "./app.css";
+import "./test-style.css";
 import Quiz from "./assets/components/Quiz";
 import Timer from "./assets/components/Timer";
 import Start from "./assets/components/Start";
