@@ -146,6 +146,7 @@
     background: linear-gradient(#0e0124, #22074d);
     background: green;
   }
+ 
 }
 
 /* --- PYRAMID & EKONOMI --- */
@@ -294,55 +295,5 @@
     width: 60px;
     height: 60px;
     left: 20px;
-  }
-}
-
-@media (max-width: 440px) {
-  
-  /* Frågekortet */
-  .question { 
-    width: 82% !important;       /* Sänkt till 82% för ÄNNU mer marginal till kanterna */
-    max-width: 360px;
-    min-height: auto !important;
-    font-size: 1.1rem;
-    padding: 20px 15px;          /* Lite mer luft inuti kortet också */
-    margin: 20px auto 25px auto !important; /* Centrerat med bra avstånd ner till svaren */
-    box-sizing: border-box !important;
-  }
-
-  /* Behållaren runt alla svarsknappar */
-  .answers {
-    width: 82% !important;       /* Matchar frågekortets bredd perfekt för snygga kanter */
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;                   /* Lite mer utrymme mellan knapparna */
-    margin: 0 auto !important;   /* Centrerar hela paketet */
-    /* HÄR ÄR ÄNDRINGEN: Skapar ett stort, skönt tomrum under det sista svarsalternativet */
-    margin-bottom: 40px !important; 
-    box-sizing: border-box !important;
-  }
-
-  /* Svarsknapparna */
-  .answer { 
-    width: 100% !important;
-    font-size: 0.95rem;
-    padding: 14px 12px;
-    border-radius: 8px;
-    white-space: normal;
-    word-wrap: break-word;
-    box-sizing: border-box !important;
-  }
-
-  /* Starta om / Slutkortet */
-  .restartCard {
-    width: 82% !important;       /* Samma smala, snygga bredd */
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 50px auto !important; /* Perfekt centrerat på skärmen */
-    box-sizing: border-box !important;
   }
 }
