@@ -298,35 +298,52 @@
 }
 
 @media (max-width: 440px) {
-  /* Frågekortet / Toppboxen */
-  .question {
-    width: 92% !important; /* Tar upp nästan hela skärmbredden */
-    max-width: 380px; /* Perfekt maxbredd för iPhone Pro/Max */
-    min-height: auto !important; /* Låter boxen växa nedåt om frågan är lång */
-    font-size: 1.1rem; /* Lite mer kompakt text för mindre skärmar */
-    padding: 16px 12px; /* Lagom med luft på insidan */
-    margin: 10px auto 20px auto; /* Centrerar boxen och ger avstånd nedåt */
-    box-sizing: border-box; /* Ser till att padding inte spräcker bredden */
+  
+  /* Frågekortet */
+  .question { 
+    width: 88% !important;       /* Sänkt från 92% till 88% för att ge mer utrymme på BÅDE höger och vänster sida */
+    max-width: 380px;
+    min-height: auto !important;
+    font-size: 1.1rem;
+    padding: 16px 12px;
+    /* margin: TOP RIGHT BOTTOM LEFT */
+    margin: 10px auto 20px auto !important; /* "auto" på höger/vänster tvingar kortet att ligga djupt centrerat */
+    box-sizing: border-box !important;
   }
 
   /* Behållaren runt svarsknapparna */
   .answers {
-    width: 92% !important;
+    width: 88% !important;       /* Matchar frågekortets bredd (88%) för en rak linje */
     max-width: 380px;
     display: flex;
-    flex-direction: column; /* Staplar alltid knapparna på höjden */
-    gap: 12px; /* Skönt avstånd mellan knapparna så man inte råkar trycka fel */
-    margin: 0 auto;
-    box-sizing: border-box;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto !important;   /* Tvingar perfekt centrering */
+    box-sizing: border-box !important;
   }
 
   /* Svarsknapparna */
-  .answer {
-    width: 100% !important; /* Sträcker ut sig till 100% av .answers-boxen */
-    font-size: 0.95rem; /* Drar ner textstorleken en aning så långa svar får plats på en rad */
-    padding: 14px 10px; /* Gör knappen "tjockare" – perfekt för iPhones "touch-target" */
-    border-radius: 8px; /* Snygga, mjukt rundade hörn */
-    white-space: normal; /* Tillåter texten att hoppa ner på rad 2 om svaret är jättelångt, istället för att sticka ut ur knappen */
+  .answer { 
+    width: 100% !important;
+    font-size: 0.95rem;
+    padding: 14px 10px;
+    border-radius: 8px;
+    white-space: normal;
     word-wrap: break-word;
+    box-sizing: border-box !important;
+  }
+
+  /* --- HÄR ÄR DITT RESTART/STARTA OM KORT --- */
+  /* Byt ut .restartCard mot det klassnamn du faktiskt har på ditt slutkort */
+  .restartCard {
+    width: 88% !important;       /* Samma bredd som allt annat */
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* Centrerar text och knappar inuti kortet */
+    justify-content: center;
+    /* Viktigt för centrering på skärmen: */
+    margin: 40px auto !important; /* Ökar avståndet top/bottom och sätter auto på sidorna för perfekt centrering */
+    box-sizing: border-box !important;
   }
 }
