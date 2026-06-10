@@ -146,7 +146,6 @@
     background: linear-gradient(#0e0124, #22074d);
     background: green;
   }
- 
 }
 
 /* --- PYRAMID & EKONOMI --- */
@@ -295,5 +294,39 @@
     width: 60px;
     height: 60px;
     left: 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  /* Frågekortet / Toppboxen */
+  .question {
+    width: 92% !important; /* Tar upp nästan hela skärmbredden */
+    max-width: 380px; /* Perfekt maxbredd för iPhone Pro/Max */
+    min-height: auto !important; /* Låter boxen växa nedåt om frågan är lång */
+    font-size: 1.1rem; /* Lite mer kompakt text för mindre skärmar */
+    padding: 16px 12px; /* Lagom med luft på insidan */
+    margin: 10px auto 20px auto; /* Centrerar boxen och ger avstånd nedåt */
+    box-sizing: border-box; /* Ser till att padding inte spräcker bredden */
+  }
+
+  /* Behållaren runt svarsknapparna */
+  .answers {
+    width: 92% !important;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column; /* Staplar alltid knapparna på höjden */
+    gap: 12px; /* Skönt avstånd mellan knapparna så man inte råkar trycka fel */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Svarsknapparna */
+  .answer {
+    width: 100% !important; /* Sträcker ut sig till 100% av .answers-boxen */
+    font-size: 0.95rem; /* Drar ner textstorleken en aning så långa svar får plats på en rad */
+    padding: 14px 10px; /* Gör knappen "tjockare" – perfekt för iPhones "touch-target" */
+    border-radius: 8px; /* Snygga, mjukt rundade hörn */
+    white-space: normal; /* Tillåter texten att hoppa ner på rad 2 om svaret är jättelångt, istället för att sticka ut ur knappen */
+    word-wrap: break-word;
   }
 }
