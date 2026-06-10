@@ -301,24 +301,25 @@
   
   /* Frågekortet */
   .question { 
-    width: 88% !important;       /* Sänkt från 92% till 88% för att ge mer utrymme på BÅDE höger och vänster sida */
-    max-width: 380px;
+    width: 82% !important;       /* Sänkt till 82% för ÄNNU mer marginal till kanterna */
+    max-width: 360px;
     min-height: auto !important;
     font-size: 1.1rem;
-    padding: 16px 12px;
-    /* margin: TOP RIGHT BOTTOM LEFT */
-    margin: 10px auto 20px auto !important; /* "auto" på höger/vänster tvingar kortet att ligga djupt centrerat */
+    padding: 20px 15px;          /* Lite mer luft inuti kortet också */
+    margin: 20px auto 25px auto !important; /* Centrerat med bra avstånd ner till svaren */
     box-sizing: border-box !important;
   }
 
-  /* Behållaren runt svarsknapparna */
+  /* Behållaren runt alla svarsknappar */
   .answers {
-    width: 88% !important;       /* Matchar frågekortets bredd (88%) för en rak linje */
-    max-width: 380px;
+    width: 82% !important;       /* Matchar frågekortets bredd perfekt för snygga kanter */
+    max-width: 360px;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    margin: 0 auto !important;   /* Tvingar perfekt centrering */
+    gap: 14px;                   /* Lite mer utrymme mellan knapparna */
+    margin: 0 auto !important;   /* Centrerar hela paketet */
+    /* HÄR ÄR ÄNDRINGEN: Skapar ett stort, skönt tomrum under det sista svarsalternativet */
+    margin-bottom: 40px !important; 
     box-sizing: border-box !important;
   }
 
@@ -326,24 +327,22 @@
   .answer { 
     width: 100% !important;
     font-size: 0.95rem;
-    padding: 14px 10px;
+    padding: 14px 12px;
     border-radius: 8px;
     white-space: normal;
     word-wrap: break-word;
     box-sizing: border-box !important;
   }
 
-  /* --- HÄR ÄR DITT RESTART/STARTA OM KORT --- */
-  /* Byt ut .restartCard mot det klassnamn du faktiskt har på ditt slutkort */
+  /* Starta om / Slutkortet */
   .restartCard {
-    width: 88% !important;       /* Samma bredd som allt annat */
-    max-width: 380px;
+    width: 82% !important;       /* Samma smala, snygga bredd */
+    max-width: 360px;
     display: flex;
     flex-direction: column;
-    align-items: center;         /* Centrerar text och knappar inuti kortet */
+    align-items: center;
     justify-content: center;
-    /* Viktigt för centrering på skärmen: */
-    margin: 40px auto !important; /* Ökar avståndet top/bottom och sätter auto på sidorna för perfekt centrering */
+    margin: 50px auto !important; /* Perfekt centrerat på skärmen */
     box-sizing: border-box !important;
   }
 }
