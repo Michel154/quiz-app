@@ -280,10 +280,10 @@
   }
 
   .question {
-    width: 85% !important; /* Ändrat från 90% till 85% för att ge garanterad marginal till kanterna */
-    max-width: 340px !important; /* Sätter ett maxtak så den aldrig blir bredare än en iPhone-skärm */
-    margin: 15px auto !important; /* Centrerar rutan perfekt (auto på sidorna) */
-    box-sizing: border-box !important; /* VIKTIGT: Gör att padding inte trycker ut rutan över kanten */
+    width: 90% !important; /* Samma bredd som dina svarsalternativ! */
+    max-width: 100% !important; /* Låter den sträcka ut sig helt till 90% av skärmen */
+    margin: 15px auto !important; /* Centrerar rutan perfekt med lika mycket luft på båda sidor */
+    box-sizing: border-box !important; /* Förhindrar att padding trycker ut rutan över kanten */
     font-size: 18px;
   }
 
