@@ -79,7 +79,12 @@
   transition: all 0.5s ease;
 }
 
-.answer:hover,
+@media (hover: hover) {
+  .answer:hover {
+    background: blue;
+  }
+}
+
 .answer.active {
   background: blue;
 }
