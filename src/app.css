@@ -266,79 +266,36 @@
   background: linear-gradient(to bottom, #f1c40f, #d4af37);
 }
 
+/* --- RESPONSIV DESIGN (MOBIL) --- */
 @media screen and (max-width: 768px) {
-  
-  /* .app-behållaren */
   .app {
     flex-direction: column;
-    overflow-y: auto; 
+    overflow: hidden;
   }
 
-  /* Huvudsektionen */
   .main {
     width: 100% !important;
-    min-height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrerar innehållet på skärmen */
+    height: 100vh;
   }
 
-  /* Dölj pyramiden på mobil */
   .pyramid {
     display: none !important;
   }
 
-  /* --- HÄR FIXAR VI FRÅGERUTAN --- */
   .question {
-    /* 1. ÄNDRING: Bredden ska vara flexibel (90% av skärmen) */
-    width: 90% !important;
-    
-    /* 2. ÄNDRING: Men aldrig bredare än 360 pixlar (perfect för iPhone) */
-    max-width: 360px !important;
-    
-    /* 3. ÄNDRING: 'auto' på höger/vänster ger perfekt centrering och luft till kanterna */
-    margin: 20px auto 15px auto !important;
-    
-    /* 4. ÄNDRING: Säkerställer att padding inte spräcker bredden */
-    box-sizing: border-box !important;
-    
+    width: 90%;
     font-size: 18px;
-    padding: 15px; 
-    text-align: center;
-  }
-
-  /* --- HÄR FIXAR VI SVARSALTERNATIVEN --- */
-  .answers {
-    /* Matchar frågerutan exakt */
-    width: 90% !important;
-    max-width: 360px !important;
-    margin: 0 auto !important; 
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Mellanrum mellan knapparna */
-    padding-bottom: 50px !important; /* Ger luft i botten av skärmen */
-    box-sizing: border-box;
   }
 
   .answer {
-    /* Fyller ut hela bredden inuti .answers-boxen */
-    width: 100% !important;
-    margin: 0 !important; 
+    width: 90%;
+    margin: 5px 0;
     font-size: 16px;
-    padding: 12px 10px !important;
-    border-radius: 8px;
-    box-sizing: border-box;
-    white-space: normal; /* Tillåter texten att radbrytas inuti knappen */
   }
 
-  /* Fixa Starta om / Slutkortet också */
-  .restartCard {
-    width: 90% !important;
-    max-width: 360px !important;
-    margin: 40px auto !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
+  .timer {
+    width: 60px;
+    height: 60px;
+    left: 20px;
   }
 }
