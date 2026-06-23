@@ -317,10 +317,10 @@
   .timer {
     width: 60px;
     height: 60px;
-    left: 20px;
-    position: relative !important; /* Gör klockan flexibel istället för fastlåst */
-    left: auto !important; /* Nollställer vänsterlåsningen */
-    bottom: auto !important; /* Nollställer bottenlåsningen */
-    margin: 15px auto !important; /* Centrerar klockan helt magiskt i mitten */
+    bottom: 10px; /* Behåller exakt samma höjdavstånd från botten av .top som innan */
+    left: 50% !important; /* Flyttar klockans startpunkt till 50% av skärmens bredd */
+    transform: translateX(
+      -50%
+    ); /* Drar tillbaka klockan med hälften av sin egen bredd för perfekt centrering */
   }
 }
