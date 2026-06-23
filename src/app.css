@@ -135,9 +135,8 @@
 
 /* --- NYTT: DET RÄTTA SVARET SOM BLINKAR 2 GÅNGER --- */
 .answer.reveal-blink {
-  /* Kör animationen 'quick-blink' i 0.5 sekunder per varv, totalt 2 varv (1 sek) */
   animation: quick-blink 0.5s ease 2;
-  background: green; /* Stannar kvar som grön efter animationen slutar */
+  background: green;
 }
 
 @keyframes quick-blink {
@@ -267,23 +266,43 @@
 @media screen and (max-width: 768px) {
   .app {
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: auto; /* Ändrat från hidden till auto så att mobilen kan skrolla vid behov */
   }
 
   .main {
     width: 100% !important;
-    height: 100vh;
+    min-height: 100vh; /* Ändrat från height till min-height så det blir flexibelt på iPhone */
+    display: flex;
+    flex-direction: column;
   }
 
   .pyramid {
     display: none !important;
   }
 
+  /* Justerar både frågerutan och din resultatruta (slutskärmen) exakt likadant */
+  .question, .endScreen {
+    width: 90% !important; 
+    max-width: 100% !important; 
+    margin: 30px auto !important; /* Centrerar boxarna helt magiskt på skärmen */
+    box-sizing: border-box !important; /* Låser paddingen till insidan av iPhone-skärmen */
+  }
+
+  /* Specifik justering för textstorlek inuti resultatrutan på mobil så det inte spricker */
+  .endScreen {
+    padding: 25px 15px !important; 
+  }
+  
+  .endText {
+    font-size: 1.8rem !important;
+  }
+
+  .earnedText {
+    font-size: 1.4rem !important;
+    margin-bottom: 20px !important;
+  }
+
   .question {
-    width: 90% !important; /* Samma bredd som dina svarsalternativ! */
-    max-width: 100% !important; /* Låter den sträcka ut sig helt till 90% av skärmen */
-    margin: 15px auto !important; /* Centrerar rutan perfekt med lika mycket luft på båda sidor */
-    box-sizing: border-box !important; /* Förhindrar att padding trycker ut rutan över kanten */
     font-size: 18px;
   }
 
