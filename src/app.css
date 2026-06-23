@@ -266,29 +266,30 @@
 @media screen and (max-width: 768px) {
   .app {
     flex-direction: column;
-    overflow-y: auto; /* Ändrat från hidden till auto så att mobilen kan skrolla vid behov */
+    overflow-y: auto; 
   }
 
   .main {
     width: 100% !important;
-    min-height: 100vh; /* Ändrat från height till min-height så det blir flexibelt på iPhone */
+    min-height: 100vh; 
     display: flex;
     flex-direction: column;
+    /* --- HÄR ÄR ÄNDRINGEN FÖR MOBILVY --- */
+    align-items: center;     /* Centrerar vänster/höger på iPhonen */
+    justify-content: center; /* Centrerar topp/botten mitt i bakgrundsbilden */
   }
 
   .pyramid {
     display: none !important;
   }
 
-  /* Justerar både frågerutan och din resultatruta (slutskärmen) exakt likadant */
   .question, .endScreen {
     width: 90% !important; 
     max-width: 100% !important; 
-    margin: 30px auto !important; /* Centrerar boxarna helt magiskt på skärmen */
-    box-sizing: border-box !important; /* Låser paddingen till insidan av iPhone-skärmen */
+    margin: 15px auto !important; /* Ändrat från 30px till 15px så justify-content får mer utrymme att centrera vertikalt */
+    box-sizing: border-box !important; 
   }
 
-  /* Specifik justering för textstorlek inuti resultatrutan på mobil så det inte spricker */
   .endScreen {
     padding: 25px 15px !important; 
   }
