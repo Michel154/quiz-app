@@ -266,16 +266,16 @@
 @media screen and (max-width: 768px) {
   .app {
     flex-direction: column;
-    overflow-y: auto; 
+    overflow-y: auto;
   }
 
   .main {
     width: 100% !important;
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     /* --- HÄR ÄR ÄNDRINGEN FÖR MOBILVY --- */
-    align-items: center;     /* Centrerar vänster/höger på iPhonen */
+    align-items: center; /* Centrerar vänster/höger på iPhonen */
     justify-content: center; /* Centrerar topp/botten mitt i bakgrundsbilden */
   }
 
@@ -283,17 +283,18 @@
     display: none !important;
   }
 
-  .question, .endScreen {
-    width: 90% !important; 
-    max-width: 100% !important; 
+  .question,
+  .endScreen {
+    width: 90% !important;
+    max-width: 100% !important;
     margin: 15px auto !important; /* Ändrat från 30px till 15px så justify-content får mer utrymme att centrera vertikalt */
-    box-sizing: border-box !important; 
+    box-sizing: border-box !important;
   }
 
   .endScreen {
-    padding: 25px 15px !important; 
+    padding: 25px 15px !important;
   }
-  
+
   .endText {
     font-size: 1.8rem !important;
   }
@@ -317,5 +318,9 @@
     width: 60px;
     height: 60px;
     left: 20px;
+    position: relative !important; /* Gör klockan flexibel istället för fastlåst */
+    left: auto !important; /* Nollställer vänsterlåsningen */
+    bottom: auto !important; /* Nollställer bottenlåsningen */
+    margin: 15px auto !important; /* Centrerar klockan helt magiskt i mitten */
   }
 }
