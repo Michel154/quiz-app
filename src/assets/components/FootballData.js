@@ -43,9 +43,9 @@ export const FootballData = [
     id: 5,
     question: "Vilken spelare har gjort flest mål totalt i VM-historien?",
     answers: [
-      { text: "Miroslav Klose", correct: true },
+      { text: "Miroslav Klose", correct: false },
       { text: "Ronaldo (Brasilien)", correct: false },
-      { text: "Lionel Messi", correct: false },
+      { text: "Lionel Messi", correct: true },
       { text: "Pelé", correct: false },
     ],
   },
