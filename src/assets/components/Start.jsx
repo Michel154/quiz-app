@@ -17,6 +17,12 @@ export default function Start({ setUsername }) {
     }
   };
 
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  };
+
   return (
     <div className="start">
       <input
@@ -24,6 +30,7 @@ export default function Start({ setUsername }) {
         className="startInput"
         ref={inputRef}
         onChange={() => setError(false)}
+        onKeyDown={handleKeyDown}
       />
       <button className="startButton" onClick={handleClick}>
         Start Quiz
